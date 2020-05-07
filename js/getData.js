@@ -1,0 +1,1 @@
+document.querySelector("#dataRodape").innerHTML = new Date().getFullYear()
