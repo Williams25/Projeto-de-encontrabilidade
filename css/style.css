@@ -20,7 +20,7 @@ html, body {
 
 .content-img {
     background: url("../img/dfdf.jpg") no-repeat;
-    background-size: auto;
+    background-size: cover;
     height: auto;
     box-shadow: inset 0 0 0 gold, 0 0 1em rgba(0, 0, 0, 0.9);
 }
