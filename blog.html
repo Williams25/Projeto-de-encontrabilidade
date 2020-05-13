@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./bootstrap-4.4.1-dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	<title>Animes online</title>
+</head>
+
+<body>
+	<header class="content-img img-fluid">
+		<nav class="navbar navbar-expand-lg navbar-dark collor-back" id="topo">
+			<img src="./img/Anime-Logo.png" width="150" class="d-inline-block align-top img-fluid"
+				onclick="screenSwitch('#')">
+			<button class="navbar-toggler v-button" type="button" data-toggle="collapse" data-target="#navbarNav"
+				aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse ml-5" id="navbarNav">
+				<ul class="navbar-nav">
+					<li class="nav-item active">
+						<a class="nav-link text-light font-weight-bold scroll-page" href="./index.html">Home</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link text-light font-weight-bold scroll-page" href="./lancamentos.html">Lançamentos</a>
+					</li>
+					<li class="navs-item">
+						<a class="nav-link text-light font-weight-bold scroll-page" href="#">Blog</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link text-light font-weight-bold scroll-page" href="#">Sobre</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link text-light font-weight-bold scroll-page" href="#">Contato</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+	</header>
+
+	<main role="main">
+		<section class="container mb-5 text-center">
+			<h3 class="mt-5">Um site criado para a Comunidade compartilhar e curtir aquilo que mais gosta.</h3>
+			<span>Dias de lançamentos legendados: segunda, terça, quarta, quinta, sexta, sábado e domingo.</span>
+		</section>
+
+		<section class="container mt-5">
+			<div class="ultimosPost text-center mt-5">
+				<span>Anime mais acessado da semana</span>
+				<hr>
+			</div>
+
+			<div class="img-comentarios text-center mb-3 mt-5">
+				<img src="../img/One_Piece_Title.png" class="card-img-top" alt="...">
+				<div class="card-body text-center">
+					<h3 class="card-title">Anime - One Piece</h3>
+					<div class="row">
+						<div class="col">
+							<span class="destaque-sinopse" onclick="screenSwitch('./sinopses/onepiece.html')">ver sinopse</span>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div id="lista">
+				<div class="comentarios">
+					<div class="comentario-texto mb-3">
+						<span>Comentarios</span>
+					</div>
+					<ul class="list-group list-group-flush">
+						<li class="list-group-item mt-2">
+							<div class="row">
+								<div class="col">
+									<span class="nome">Matheus</span>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col">
+									<span class="comentarioLista">Um bom anime</span>
+								</div>
+							</div>
+						</li>
+						<li class="list-group-item mt-2">
+							<div class="row">
+								<div class="col">
+									<span class="nome">Andre</span>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col">
+									<span class="comentarioLista">Esse anime esta cada vez mais insano</span>
+								</div>
+							</div>
+						</li>
+						<li class="list-group-item mt-2">
+							<div class="row">
+								<div class="col">
+									<span class="nome">Taty</span>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col">
+									<span class="comentarioLista">
+										O Arco de Wano está cada vez melhor
+									</span>
+								</div>
+							</div>
+						</li>
+
+
+						<li class="list-group-item mt-2" v-for="(posts, index) of posts">
+							<div class="row">
+								<div class="col">
+									<span class="nome">{{posts.nome}}</span>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col">
+									<span class="comentarioLista">
+										{{posts.comentario}}
+									</span>
+								</div>
+							</div>
+						</li>
+
+					</ul>
+				</div>
+
+				<div class="form-comentarios mt-5 text-center">
+					<span>Escreva um comentario</span>
+					<hr>
+					<form @submit.prevent="submit">
+						<div class="form-group row mt-2">
+							<div class="col-sm-10">
+								<input type="text" class="form-control" placeholder="Digite seu nome" v-model="nome">
+								<textarea class="form-control" placeholder="Escreva um comentario sobre o anime mais acessado da semana"
+									v-model="comentario"></textarea>
+								<button type="button" class="btn btn-dark mt-3" @click="submit">Enviar</button>
+								<div class="row">
+									<div class="col mt-3">
+										<span v-for="valida in valida">{{valida}}</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<footer id="sticky-footer" class="py-4 bg-dark text-white-50 mt-5">
+		<div class="container text-center">
+			<span>Todos direitos reservados ©<span id="dataRodape"></span></span>
+		</div>
+	</footer>
+	<script src="./bootstrap-4.4.1-dist/js/jquery-3.4.1.slim.min.js"></script>
+	<script src="./bootstrap-4.4.1-dist/js/popper.min.js"></script>
+	<script src="./bootstrap-4.4.1-dist/js/bootstrap.min.js"></script>
+	<script src="js/redirecionamento.js"></script>
+	<script src="./js/getData.js"></script>
+	<script src="./js/vue.js"></script>
+	<script src="./js/storage.js"></script>
+	<script>
+		new Vue({
+			el: '#lista',
+			data: {
+				nome: '',
+				comentario: '',
+				valida: [],
+				posts: verPost()  
+			},
+			methods: {
+				submit() {
+					this.valida = []
+					if (this.nome == '' || this.comentario == '') {
+						this.valida.push('Preencha os campos corretamente!')
+					} else {
+						salvarPost({
+							nome: this.nome,
+							comentario: this.comentario,
+							valida: this.valida.push('Comentario postado.')
+						})
+						setTimeout(() => { this.valida = [] }, 2000)
+						this.nome = this.comentario = ''
+						this.posts = this.verPost()
+					}
+				},
+				verPost() {
+						return JSON.parse(localStorage['posts'])
+				}
+			}
+		})
+	</script>
+</body>
+
+</html>
