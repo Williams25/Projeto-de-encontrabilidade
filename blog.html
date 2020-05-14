@@ -67,7 +67,7 @@
 			<div id="lista">
 				<div class="comentarios">
 					<div class="comentario-texto mb-3">
-						<span>Comentarios</span>
+						<span>Comentários</span>
 					</div>
 					<ul class="list-group list-group-flush">
 						<li class="list-group-item mt-2">
@@ -129,13 +129,13 @@
 				</div>
 
 				<div class="form-comentarios mt-5 text-center">
-					<span>Escreva um comentario</span>
+					<span>Escreva um comentário</span>
 					<hr>
 					<form @submit.prevent="submit">
 						<div class="form-group row mt-2">
 							<div class="col-sm-10">
 								<input type="text" class="form-control" placeholder="Digite seu nome" v-model="nome">
-								<textarea class="form-control" placeholder="Escreva um comentario sobre o anime mais acessado da semana"
+								<textarea class="form-control" placeholder="Escreva um comentário sobre o anime mais acessado da semana"
 									v-model="comentario"></textarea>
 								<button type="button" class="btn btn-dark mt-3" @click="submit">Enviar</button>
 								<div class="row">
@@ -181,7 +181,7 @@
 						salvarPost({
 							nome: this.nome,
 							comentario: this.comentario,
-							valida: this.valida.push('Comentario postado.')
+							valida: this.valida.push('Comentário postado.')
 						})
 						setTimeout(() => { this.valida = [] }, 2000)
 						this.nome = this.comentario = ''
