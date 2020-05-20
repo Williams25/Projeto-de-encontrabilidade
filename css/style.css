@@ -108,4 +108,19 @@ html, body {
 
 .navbar-nav li a {
     outline: none !important;
+    cursor: pointer;
+}
+
+.sobreimg {
+    width: 100%;
+    height: auto;
+}
+.sobreimg img{
+    width: 20rem;
+    height: auto;
+    border-radius: 15px;
+    /* margin-left: 40%; */
+}
+.video-container video {
+    outline: none;
 }
