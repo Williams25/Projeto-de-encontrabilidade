@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./bootstrap-4.4.1-dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	<title>Animes online</title>
+</head>
+
+<body>
+	<header class="content-img img-fluid">
+		<nav class="navbar navbar-expand-lg navbar-dark collor-back" id="topo">
+			<img src="./img/Anime-Logo.png" width="150" class="d-inline-block align-top img-fluid"
+				onclick="screenSwitch('./index.html')">
+			<button class="navbar-toggler v-button" type="button" data-toggle="collapse" data-target="#navbarNav"
+				aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse ml-5" id="navbarNav">
+				<ul class="navbar-nav">
+					<li class="nav-item active">
+						<a class="nav-link text-light font-weight-bold scroll-page" href="./index.html">Home</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link text-light font-weight-bold scroll-page" href="./lancamentos.html">Lançamentos</a>
+					</li>
+					<li class="navs-item">
+						<a class="nav-link text-light font-weight-bold scroll-page" href="./blog.html">Blog</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link text-light font-weight-bold scroll-page" href="./sobre.html">Sobre</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link text-light font-weight-bold scroll-page" href="#">Contato</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+	</header>
+
+	<main role="main">
+		<section class="container mb-5 text-center">
+			<h3 class="mt-5">Um site criado para a Comunidade compartilhar e curtir aquilo que mais gosta.</h3>
+			<span>Dias de lançamentos legendados: segunda, terça, quarta, quinta, sexta, sábado e domingo.</span>
+		</section>
+
+		<section class="container mt-5">
+			<div class="ultimosPost text-center mt-5">
+				<span>Entre em contato</span>
+				<hr>
+			</div>
+
+			<form>
+				<div class="form-group">
+					<label for="exampleInputEmail1">Email</label>
+					<input type="email" class="form-control" aria-describedby="emailHelp">
+				</div>
+				<div class="form-group">
+					<label for="exampleInputPassword1">Assunto</label>
+					<input type="text" class="form-control">
+				</div>
+				<div class="form-group">
+					<textarea class="form-control" placeholder="Escreva duvidas ou sugestões"></textarea>
+				</div>
+				<button type="submit" class="btn btn-dark mt-3">Enviar</button>
+			</form>
+		</section>
+	</main>
+
+	<footer id="sticky-footer" class="py-4 bg-dark text-white-50 mt-5">
+		<div class="container text-center">
+			<span>Todos direitos reservados ©<span id="dataRodape"></span></span>
+		</div>
+	</footer>
+	<script src="./bootstrap-4.4.1-dist/js/jquery-3.4.1.slim.min.js"></script>
+	<script src="./bootstrap-4.4.1-dist/js/popper.min.js"></script>
+	<script src="./bootstrap-4.4.1-dist/js/bootstrap.min.js"></script>
+	<script src="js/redirecionamento.js"></script>
+	<script src="./js/getData.js"></script>
+</body>
+
+</html>

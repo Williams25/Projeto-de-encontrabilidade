@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./bootstrap-4.4.1-dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Animes online</title>
+</head>
+
+<body>
+  <header class="content-img img-fluid">
+    <nav class="navbar navbar-expand-lg navbar-dark collor-back" id="topo">
+      <img src="./img/Anime-Logo.png" width="150" class="d-inline-block align-top img-fluid"
+        onclick="screenSwitch('./index.html')">
+      <button class="navbar-toggler v-button" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse ml-5" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link text-light font-weight-bold scroll-page" href="./index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light font-weight-bold scroll-page" href="./lancamentos.html">Lançamentos</a>
+          </li>
+          <li class="navs-item">
+            <a class="nav-link text-light font-weight-bold scroll-page" href="./blog.html">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light font-weight-bold scroll-page" href="#">Sobre</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light font-weight-bold scroll-page" href="./contato.html">Contato</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main role="main">
+    <section class="container mb-5 text-center">
+      <h3 class="mt-5">Um site criado para a Comunidade compartilhar e curtir aquilo que mais gosta.</h3>
+      <span>Dias de lançamentos legendados: segunda, terça, quarta, quinta, sexta, sábado e domingo.</span>
+    </section>
+
+    <div class="container mt-5 mb-5">
+      <div class="row">
+        <div class="col mt-3 sobre">
+          <div class="text-center">
+            <span>Sobre</span>
+          </div>
+          <hr>
+          <div class="row ml-5 mr-5 mt-5 mb-3">
+            <strong>O que somos ?</strong>
+          </div>
+          <span class="ml-5 mr-5">
+            Nosso site está destinado à divulgação de animes, apenas fazemos a divulgações, independentemente do anime.
+            O site Animes foi criado para compartilhar entretenimento ao ver animes online, lançamentos, sinopses.<br>
+            Já pensou em ficar um final de semana sem ver aquele anime que tanto gosta ? Pois aqui no site Animes temos
+            lançamentos de animes todos os dias de segunda a segunda.
+          </span>
+          <div class="row ml-5 mr-5 mt-3 mb-3">
+            <strong>Quais nossos tipos de divulgação?</strong>
+          </div>
+          <span class="ml-5 mr-5">
+            Animes em lançamentos, e animes já finalizados.
+          </span> <br>
+          <span class="ml-5 mr-5">
+            É importante citar que o nosso site não irá divulgar animes com conteúdo sexual.
+          </span>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer id="sticky-footer" class="py-4 bg-dark text-white-50 mt-5">
+    <div class="container text-center">
+      <span>Todos direitos reservados ©<span id="dataRodape"></span></span>
+    </div>
+  </footer>
+  <script src="./bootstrap-4.4.1-dist/js/jquery-3.4.1.slim.min.js"></script>
+  <script src="./bootstrap-4.4.1-dist/js/popper.min.js"></script>
+  <script src="./bootstrap-4.4.1-dist/js/bootstrap.min.js"></script>
+  <script src="js/redirecionamento.js"></script>
+  <script src="./js/getData.js"></script>
+</body>
+
+</html>
